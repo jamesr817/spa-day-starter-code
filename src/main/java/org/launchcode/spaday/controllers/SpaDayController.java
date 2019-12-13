@@ -81,7 +81,12 @@ public class SpaDayController {
                 appropriateFacials.add(facials.get(i));
             }
         }
-
+        //Have to be added in order to use in template in the "th:text=''" statements
+        model.addAttribute("name", name);
+        model.addAttribute("skintype",skintype);
+        model.addAttribute("manipedi", manipedi);
+        model.addAttribute("facial", facials);
+        model.addAttribute("appropriateFacial", appropriateFacials);
         return "menu";
     }
 }
