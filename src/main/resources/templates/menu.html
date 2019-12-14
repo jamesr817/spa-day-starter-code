@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8" />
     <title>Spa Menu</title>
@@ -16,15 +16,19 @@
 
 </div>
 
+
 <div id = "servicesMenu">
+<h2>Menu of Available Service</h2>
     <table>
-        <th:block>
-            <tr th:each="treatment : ${appropriateFacials}">
-                <td th:text="${treatment}">treatment</td>
+        <th:block th:each="treatment : ${facials}">
+            <tr>
+                <td th:text="${treatment}"></td>
             </tr>
         </th:block>
     </table>
 </div>
+
+
 
 </body>
 </html>
